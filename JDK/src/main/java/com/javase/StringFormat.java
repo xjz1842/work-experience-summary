@@ -1,4 +1,4 @@
-package com.example.bastype;
+package com.javase;
 
 import java.text.MessageFormat;
 

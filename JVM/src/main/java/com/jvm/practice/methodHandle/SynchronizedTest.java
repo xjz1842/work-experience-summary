@@ -16,6 +16,7 @@ public class SynchronizedTest {
         for (int i = 0; i < 1_000_000; i++) {
             foo();
         }
+        System.out.println(counter);
     }
 
     static class Lock {
