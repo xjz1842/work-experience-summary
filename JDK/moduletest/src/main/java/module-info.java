@@ -1,0 +1,3 @@
+module moduletest {
+    requires jigsawdemo;
+}
