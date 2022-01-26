@@ -2,7 +2,7 @@
 
 ### JVM 
 
-1. JVM 思维导图]
+1. JVM 思维导图
 
 ![](./JVM/doc/jvm.png)
 
