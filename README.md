@@ -4,7 +4,7 @@
 
 1. JVM 思维导图]
 
-![](./JVM/doc/jvm.pn·g)
+![](./JVM/doc/jvm.png)
 
 2. 
 
