@@ -1,4 +1,4 @@
-package com.example.concurrent.stream.limit;
+package concurrent.stream.limit;
 
 
 /**

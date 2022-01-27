@@ -1,4 +1,4 @@
-package com.example.dynamic.proxy.myjdk;
+package com.dynamic.proxy.myjdk;
 
 import java.io.*;
 

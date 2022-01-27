@@ -1,9 +1,9 @@
-package com.example.dynamic.proxy.cglib;
+package com.dynamic.proxy.cglib;
 
 
 
-import com.example.dynamic.proxy.myjdk.Man;
-import com.example.dynamic.proxy.myjdk.Zhangsan;
+import com.dynamic.proxy.myjdk.Man;
+import com.dynamic.proxy.myjdk.Zhangsan;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

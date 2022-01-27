@@ -1,4 +1,4 @@
-package com.example.dynamic.proxy.myjdk;
+package com.dynamic.proxy.myjdk;
 
 import javax.tools.JavaCompiler;
 import javax.tools.StandardJavaFileManager;

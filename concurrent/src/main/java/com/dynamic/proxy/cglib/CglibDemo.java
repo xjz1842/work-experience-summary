@@ -1,7 +1,7 @@
-package com.example.dynamic.proxy.cglib;
+package com.dynamic.proxy.cglib;
 
 
-import com.example.dynamic.proxy.myjdk.Zhangsan;
+import com.dynamic.proxy.myjdk.Zhangsan;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
