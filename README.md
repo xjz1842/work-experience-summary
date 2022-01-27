@@ -10,9 +10,9 @@
 
 [URLClassloader加载类实现原理](./JVM/doc/类加载机制/URLClassloader加载类实现原理.md)
 
-2. 多线程高并发
+2. 多线程高并发思维导图
 
-![](./多线程并发/doc/java多线程并发.png)
+[多线程高并发思维导图](./多线程并发/doc/java多线程并发.xmind)
 
 
 
