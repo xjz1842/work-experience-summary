@@ -1,7 +1,6 @@
-package concurrent;
+package com.concurrent.lock;
 
 public class TestSynchronized {
-
 
     private  static  final  TestSynchronized instance = new TestSynchronized();
 
@@ -85,7 +84,6 @@ public class TestSynchronized {
     }
 
     public static void main(String[] args) {
-
         TestSynchronized testSynchronized =  TestSynchronized.getInstance();
 
         //同一个实例，不同的synchronized方法，对象锁有约束（同一个对象——对象锁）——a. x.isSyncA()与x.isSyncB()

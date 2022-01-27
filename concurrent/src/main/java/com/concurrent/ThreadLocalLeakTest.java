@@ -1,4 +1,4 @@
-package concurrent;
+package com.concurrent;
 
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;

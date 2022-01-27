@@ -1,4 +1,4 @@
-package concurrent.stream.limit;
+package com.concurrent.stream.limit;
 
 
 public class LeakyBucketDemo {

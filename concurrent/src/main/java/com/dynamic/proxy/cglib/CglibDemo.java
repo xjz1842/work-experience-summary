@@ -12,7 +12,7 @@ public class CglibDemo {
 
     public static void main(String[] args)throws Throwable {
 
-        Enhancer  enhancer = new Enhancer();
+        Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(Zhangsan.class);
 
         enhancer.setCallback(new MethodInterceptor() {

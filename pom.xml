@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>concurrent</module>
+        <module>JVM</module>
     </modules>
     <packaging>pom</packaging>
 
