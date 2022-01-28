@@ -1,4 +1,4 @@
-package com.dynamic.proxy.myjdk;
+package com.example.proxy.myjdk;
 
 import java.lang.reflect.Method;
 

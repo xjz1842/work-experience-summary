@@ -1,4 +1,4 @@
-package com.clean;
+package com.javase.clean;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.javase;
+package com.javase.type;
 
 import java.text.MessageFormat;
 

@@ -18,7 +18,6 @@ public class FutureTest {
         Future futureOne = executorService.submit(new Runnable() {
             @Override
             public void run() {
-
                 System.out.println("start runable one");
                 try {
                     Thread.sleep(5000);
@@ -28,7 +27,7 @@ public class FutureTest {
             }
         });
 
-       // (3)添加任务one
+       // (3)添加任务two
         Future futureTwo = executorService.submit(new Runnable() {
             @Override
             public void run() {
@@ -48,11 +47,14 @@ public class FutureTest {
         } catch (Exception e) {
             System.out.println(e.getLocalizedMessage());
         }
+        //(5)等待任务one执行完毕
+        System.out.println("task one " + futureOne.get());
+        //(6)等待任务two执行完毕
+        System.out.println("task two " + futureTwo.get());
+        // (7)等待任务three执行完毕
+        System.out.println("task three " + (futureThree==null?null:futureThree.get()));
 
-        System.out.println("task one " + futureOne.get());//(5)等待任务one执行完毕
-        System.out.println("task two " + futureTwo.get());//(6)等待任务two执行完毕
-        System.out.println("task three " + (futureThree==null?null:futureThree.get()));// (7)等待任务three执行完毕
-
-        executorService.shutdown();//(8)关闭线程池，阻塞直到所有任务执行完毕
+        //(8)关闭线程池，阻塞直到所有任务执行完毕
+        executorService.shutdown();
     }
 }
