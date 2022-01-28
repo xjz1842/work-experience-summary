@@ -4,6 +4,9 @@ package com.concurrent.lock;
 import java.util.function.Consumer;
 
 /**
+ * reference:
+ * http://tutorials.jenkov.com/java-concurrency/synchronized.html
+ *
  * The synchronized keyword can be used to mark four different types of blocks:
  *
  *  1. Instance methods
