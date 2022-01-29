@@ -6,7 +6,7 @@ public class CleaningExample implements AutoCloseable {
 
     private static final Cleaner cleaner = Cleaner.create();
 
-    static class State implements Runnable {
+     static class State implements Runnable {
         State() {}
 
         @Override
@@ -25,7 +25,7 @@ public class CleaningExample implements AutoCloseable {
 
     @Override
     public void close() {
-        System.out.println("回调用");
+        System.out.println("回调");
         cleanable.clean();
     }
 }
