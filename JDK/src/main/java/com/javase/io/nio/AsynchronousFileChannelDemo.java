@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
 public class AsynchronousFileChannelDemo {
 
     public static void main(String[] args) {
-        Path path = Paths.get("C:\\Users\\zhanxuejun\\study\\work-experience-summary\\JDK\\src\\main\\resources\\nio-data.txt");
+        Path path = Paths.get("nio-data.txt");
 
 //        // example 1 sync read
 //        syncRead(path);
