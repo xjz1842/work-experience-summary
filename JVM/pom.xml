@@ -12,13 +12,14 @@
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <asm.version>9.2</asm.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
-            <version>7.1</version>
+            <version>${asm.version}</version>
         </dependency>
 
          <!--&lt;!&ndash;https://mvnrepository.com/artifact/org.openjdk.jol/jol-core&ndash;&gt;-->

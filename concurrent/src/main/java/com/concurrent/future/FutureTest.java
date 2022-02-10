@@ -1,4 +1,4 @@
-package com.concurrent;
+package com.concurrent.future;
 
 
 import java.util.concurrent.ArrayBlockingQueue;
