@@ -1,7 +1,7 @@
-package com.example.proxy.jdk;
+package com.jvm.practice.proxy.jdk;
 
-import com.example.proxy.myjdk.Man;
-import com.example.proxy.myjdk.Zhangsan;
+import com.jvm.practice.proxy.myjdk.Man;
+import com.jvm.practice.proxy.myjdk.Zhangsan;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -13,7 +13,7 @@ public class JdkProxyTest {
 //        for(int i =0; i< 17; i++){
 //            Class.forName("com.jdk14.dynamic.proxy.myjdk.Zhangsan").getConstructor().newInstance();
 //        }
-             Method method = Class.forName("com.example.proxy.myjdk.Zhangsan").getMethod("findObject");
+             Method method = Class.forName("com.jvm.practice.proxy.myjdk.Zhangsan").getMethod("findObject");
 
              Zhangsan zhangsan = new Zhangsan();
 
@@ -29,10 +29,10 @@ public class JdkProxyTest {
         Man man1 = (Man)Proxy.newProxyInstance(JdkProxyTest.class.getClassLoader(),new Class[]{Man.class},handler);
         man1.findObject();
 
-        //3.Method
+        //3.Field
         for(int i=0; i <=16; i++) {
             if(16 == i) {
-                Class.forName("com.example.proxy.myjdk.Zhangsan").getField("test");
+                Class.forName("com.jvm.practice.proxy.myjdk.Zhangsan").getField("test");
             }
         }
     }

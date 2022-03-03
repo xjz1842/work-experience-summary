@@ -1,4 +1,4 @@
-package com.example.proxy.myjdk;
+package com.jvm.practice.proxy.myjdk;
 
 import java.io.*;
 

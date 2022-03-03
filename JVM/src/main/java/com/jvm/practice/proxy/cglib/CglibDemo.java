@@ -1,7 +1,7 @@
-package com.example.proxy.cglib;
+package com.jvm.practice.proxy.cglib;
 
 
-import com.example.proxy.myjdk.Zhangsan;
+import com.jvm.practice.proxy.myjdk.Zhangsan;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

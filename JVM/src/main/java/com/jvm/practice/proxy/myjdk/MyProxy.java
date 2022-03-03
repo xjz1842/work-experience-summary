@@ -1,4 +1,4 @@
-package com.example.proxy.myjdk;
+package com.jvm.practice.proxy.myjdk;
 
 import javax.tools.JavaCompiler;
 import javax.tools.StandardJavaFileManager;
