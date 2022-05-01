@@ -1,7 +1,5 @@
 package com.example.jdk9.http;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 
 import java.io.*;
 import java.net.URI;
@@ -60,31 +58,16 @@ public class HttpPostTest {
 //                  HttpResponse.BodyHandlers.ofString()
 //          );
 
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("word", text);
-
             // POST
             HttpResponse<String> response = client.send(
                     HttpRequest
                             .newBuilder(new URI("http://wwww.baidu.com"))
                             .header("Content-Type", "application/json")
                             .header("token", "88080a24149f4fea839ad64dcdc5b7e3")
-                            .POST(HttpRequest.BodyPublishers.ofString(jsonObject.toString())).build(), HttpResponse.BodyHandlers.ofString());
+                            .POST(HttpRequest.BodyPublishers.ofString("word=123")).build(), HttpResponse.BodyHandlers.ofString());
 
             String body = response.body();
-
-            JSONObject json = JSON.parseObject(body);
-
-            String str = json.getString("code");
-
-            boolean status = json.getJSONObject("data").getBoolean("status");
-
-            if (status && "5200".equals(str)) {
-                System.out.println("true");
-            } else {
-                return false;
-            }
-
+            System.out.println(body);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
