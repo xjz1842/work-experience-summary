@@ -8,20 +8,18 @@ public class ThreadLocalLeakTest {
 
     final static ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(5,5,1, TimeUnit.MINUTES,new LinkedBlockingDeque<>());
 
-    final static ThreadLocal<Long> localVariable = new ThreadLocal<Long>();
+    final static ThreadLocal<Long> localVariable = new ThreadLocal<>();
 
     public static void main(String[] args)throws Exception {
 
         // (3)
         for (int i = 0; i < 500; ++i) {
-            poolExecutor.execute(new Runnable() {
-                public void run() {
-                    // (4)
-                    localVariable.set(Long.valueOf(1));
-                    // (5)
-                    System.out.println("use local varaible");
-                    localVariable.remove();
-                }
+            poolExecutor.execute(() -> {
+                // (4)
+                localVariable.set(1L);
+                // (5)
+                System.out.println("use local varaible");
+                localVariable.remove();
             });
 
             Thread.sleep(1000);

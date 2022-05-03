@@ -4,12 +4,7 @@ public class ThreadDemo {
 
     public static void main(String[] args) {
         //创建线程
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("线程");
-            }
-        });
+        Thread thread = new Thread(() -> System.out.println("thread"));
 
         ThreadEx thread1 = new ThreadEx();
 
