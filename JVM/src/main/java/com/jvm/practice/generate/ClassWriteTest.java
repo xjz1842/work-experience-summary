@@ -17,7 +17,7 @@ public class ClassWriteTest {
                 "com/jvm/practice/generate/Comparable", null, "java/lang/Object",
                 null);
 
-        cw.visitField(ACC_PUBLIC+ACC_STATIC+ACC_FINAL,"LESS","I","LESS",new Integer(1)).visitEnd();
+        cw.visitField(ACC_PUBLIC+ACC_STATIC+ACC_FINAL,"LESS","I","LESS",1).visitEnd();
 
         cw.visitEnd();
 
