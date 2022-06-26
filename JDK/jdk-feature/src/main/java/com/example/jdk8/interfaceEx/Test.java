@@ -21,6 +21,13 @@ public class Test
         set.add("123");
         set.remove("123");
         System.out.println(set);
+
+        String s = "1";
+        String s1 = "1";
+        String s4 = s + s1;
+        String s5 = "11";
+        System.out.println(s4 == s5);
+        System.out.println(s == s1);
     }
 
      static void print(Consumer<List<String>> consumer){
