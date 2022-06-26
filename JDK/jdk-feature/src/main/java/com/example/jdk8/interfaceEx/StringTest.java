@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
 
-public class Test
+public class StringTest
 {
     public static void main(String[] args) {
         final List<String> list = new ArrayList<>();
