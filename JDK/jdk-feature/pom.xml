@@ -13,9 +13,9 @@
     <artifactId>jdk-feature</artifactId>
 
     <properties>
-        <maven.compiler.source>18</maven.compiler.source>
-        <maven.compiler.target>18</maven.compiler.target>
-        <java.version>18</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <java.version>21</java.version>
         <guava.version>31.0.1-jre</guava.version>
     </properties>
 
@@ -27,11 +27,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.0</version>
                 <configuration>
-                    <verbose>true</verbose>
-                    <fork>true</fork>
-                    <compilerVersion>${java.version}</compilerVersion>
-                    <source>20</source>
-                    <target>20</target>
+                    <source>21</source>
+                    <target>21</target>
                     <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
             </plugin>
