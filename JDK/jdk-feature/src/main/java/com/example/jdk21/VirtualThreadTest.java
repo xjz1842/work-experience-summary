@@ -22,7 +22,7 @@ public class VirtualThreadTest {
             }));
         }  // executor.close() is called implicitly, and waits
         System.out.println("耗时" + (System.currentTimeMillis() - start));
-
+        start = System.currentTimeMillis();
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             IntStream.range(0, 10_000).forEach(i -> executor.submit(() -> {
                 Thread.sleep(Duration.ofSeconds(1));
