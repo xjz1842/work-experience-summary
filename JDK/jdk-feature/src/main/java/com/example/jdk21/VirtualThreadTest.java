@@ -1,5 +1,6 @@
 package com.example.jdk21;
 
+import java.time.Duration;
 import java.util.concurrent.Executors;
 import java.util.stream.IntStream;
 
@@ -13,10 +14,18 @@ import java.util.stream.IntStream;
 public class VirtualThreadTest {
 
     public static void main(String[] args) {
-        long start = System.currentTimeMillis();
+        var start = System.currentTimeMillis();
+        try (var executor = Executors.newWorkStealingPool()) {
+            IntStream.range(0, 10_000).forEach(i -> executor.submit(() -> {
+                Thread.sleep(Duration.ofSeconds(1));
+                return i;
+            }));
+        }  // executor.close() is called implicitly, and waits
+        System.out.println("耗时" + (System.currentTimeMillis() - start));
+
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             IntStream.range(0, 10_000).forEach(i -> executor.submit(() -> {
-                System.out.println(i);
+                Thread.sleep(Duration.ofSeconds(1));
                 return i;
             }));
         }  // executor.close() is called implicitly, and waits
